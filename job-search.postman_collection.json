@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "00e136d5-b4b1-4c39-8e3b-2c72c233d70e",
+		"name": "job-search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27250662"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"khalid\",\r\n    \"secondName\":\"ali\",\r\n    \"email\":\"khalidali81@gmail.com\",\r\n    \"password\":\"12344444444\",\r\n    \"recoveryEmail\":\"khalid123@gmail.com\",\r\n    \"DOB\":\"2000-11-20\",\r\n    \"mobileNumber\":\"01126472344\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"khalidali81@gmail.com\",\r\n    \"password\":\"12344444444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkwNmNlZDU5NGViNTQxZjQyNmEzNTMiLCJlbWFpbCI6ImVsc2F5ZWRzaGFsYW42NEBnbWFpbC5jb20iLCJpYXQiOjE3MjA4MDU1MjMsImV4cCI6MTcyMTQxMDMyM30.8_bYAtAKLBOi_rWqqSCoD0tAsdsV3cZKHm1PXO82dvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"sayed\",\r\n    \"secondName\":\"mohamed\",\r\n    \"email\":\"sayedshalan64@gmail.com\",\r\n    \"recoveryEmail\":\"zoza123@gmail.com\",\r\n    \"DOB\":\"2000-11-2\",\r\n    \"mobileNumber\":\"01112647234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkwNmNlZDU5NGViNTQxZjQyNmEzNTMiLCJlbWFpbCI6ImVsc2F5ZWRzaGFsYW42NEBnbWFpbC5jb20iLCJpYXQiOjE3MjA4MDU1MjMsImV4cCI6MTcyMTQxMDMyM30.8_bYAtAKLBOi_rWqqSCoD0tAsdsV3cZKHm1PXO82dvk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYTVlNDc5Nzc4NmI0MDBhNjI0MDMiLCJlbWFpbCI6ImVsc2F5ZWRzaGFsYW42NEBnbWFpbC5jb20iLCJpYXQiOjE3MjA4MjEyMzMsImV4cCI6MTcyMTQyNjAzM30.RgMtUgnWrwV0q6B_c6hluoZiTkWCYWR_TmgwCv_ApKE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/getUserData",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getUserData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get another user data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/getAnotherUserData/6690530aeb8c898be99d8582",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getAnotherUserData",
+								"6690530aeb8c898be99d8582"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYTVlNDc5Nzc4NmI0MDBhNjI0MDMiLCJlbWFpbCI6ImVsc2F5ZWRzaGFsYW42NEBnbWFpbC5jb20iLCJpYXQiOjE3MjA4MjEyMzMsImV4cCI6MTcyMTQyNjAzM30.RgMtUgnWrwV0q6B_c6hluoZiTkWCYWR_TmgwCv_ApKE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"160838745\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/updatePass",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"updatePass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get account using recovery email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/getALLAccountUsingRecoveryEmail/zoza1234@gmail.com",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getALLAccountUsingRecoveryEmail",
+								"zoza1234@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "add company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkyZGU1ZmJlN2FlMTU1OTcyMDEwNjUiLCJlbWFpbCI6ImtoYWxpZGFsaTgxQGdtYWlsLmNvbSIsImlhdCI6MTcyMDkwMTI1MiwiZXhwIjoxNzIxNTA2MDUyfQ.V29IYMvJNIpC4Y_pIQ-JtGSmS_1HIG8hA8opiWC4KZ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\":\"noun\",\r\n    \"description\":\"for deliver order\",\r\n    \"industry\":\"all thing\",\r\n    \"address\":\"cairo\",\r\n    \"numberOfEmployees\":\"500-800\",\r\n    \"companyEmail\":\"noun12@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/company/addCompany",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"addCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwODMyNzk2LCJleHAiOjE3MjE0Mzc1OTZ9.tUU_GqvIt58xDpDI9XAkvGqNsGv8YK0YkNhxmauj_sU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\":\"google\",\r\n    \"description\":\"the most popular company in the world\",\r\n    \"industry\":\"search engine\",\r\n    \"address\":\"milano\",\r\n    \"numberOfEmployees\":\"500-800\",\r\n    \"companyEmail\":\"google12@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/company/updateCompany/6691d41c5edf1c203c9be2a9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"updateCompany",
+								"6691d41c5edf1c203c9be2a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwODk4NTY0LCJleHAiOjE3MjE1MDMzNjR9.xuSjyQzahTIyTb8d6UX1DPq6VL8erHKsw51c8Lbf13c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/deleteCompany/6691d41c5edf1c203c9be2a9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"deleteCompany",
+								"6691d41c5edf1c203c9be2a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comapny",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwODk4NTY0LCJleHAiOjE3MjE1MDMzNjR9.xuSjyQzahTIyTb8d6UX1DPq6VL8erHKsw51c8Lbf13c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/getCompany/6692d45ae38e1d7ba10429dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"getCompany",
+								"6692d45ae38e1d7ba10429dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkyZGU1ZmJlN2FlMTU1OTcyMDEwNjUiLCJlbWFpbCI6ImtoYWxpZGFsaTgxQGdtYWlsLmNvbSIsImlhdCI6MTcyMDkwMTI1MiwiZXhwIjoxNzIxNTA2MDUyfQ.V29IYMvJNIpC4Y_pIQ-JtGSmS_1HIG8hA8opiWC4KZ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/company/searchForCompany?nameOfCompany=google",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"searchForCompany"
+							],
+							"query": [
+								{
+									"key": "nameOfCompany",
+									"value": "google"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "add job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwOTA0Mjg1LCJleHAiOjE3MjE1MDkwODV9.Ox90HMI5efbMlNcF0kSkg6pvUkbB_JSEL3ljSt7JWA4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTitle\":\"frontend\",\r\n    \"jobLocation\":\"onsite\",\r\n    \"jobDescription\":\"developer frontend\",\r\n    \"workingTime\":\"part-time\",\r\n    \"seniorityLevel\":\"Junior\",\r\n    \"technicalSkills\":[\"Node.js , express\"],\r\n    \"softSkills\":[\"smart , helpful\"],\r\n    \"companyID\":\"6692e149be7ae1559720106d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/job/addJob",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"job",
+								"addJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update job",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwOTA0Mjg1LCJleHAiOjE3MjE1MDkwODV9.Ox90HMI5efbMlNcF0kSkg6pvUkbB_JSEL3ljSt7JWA4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTitle\":\"backend\",\r\n    \"jobLocation\":\"onsite\",\r\n    \"jobDescription\":\"developer backend\",\r\n    \"workingTime\":\"full-time\",\r\n    \"seniorityLevel\":\"Junior\",\r\n    \"technicalSkills\":[\"Node.js , express\"],\r\n    \"softSkills\":[\"smart , helpful\"],\r\n    \"companyId\":\"6692d45ae38e1d7ba10429dc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/job/updateJob/6692eedd37f2c7d7035c37f9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"job",
+								"updateJob",
+								"6692eedd37f2c7d7035c37f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwOTA0Mjg1LCJleHAiOjE3MjE1MDkwODV9.Ox90HMI5efbMlNcF0kSkg6pvUkbB_JSEL3ljSt7JWA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/job/updateJob/6692f600461dcd5bc0677630",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"job",
+								"updateJob",
+								"6692f600461dcd5bc0677630"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwOTA0Mjg1LCJleHAiOjE3MjE1MDkwODV9.Ox90HMI5efbMlNcF0kSkg6pvUkbB_JSEL3ljSt7JWA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/job/getAllJobs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"job",
+								"getAllJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get job for specific company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "goat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjkxYzUxOWUzYjEzYTM1OGI2ZmQwNjAiLCJlbWFpbCI6InNpa29vc2hhbGFuODFAZ21haWwuY29tIiwiaWF0IjoxNzIwOTA0Mjg1LCJleHAiOjE3MjE1MDkwODV9.Ox90HMI5efbMlNcF0kSkg6pvUkbB_JSEL3ljSt7JWA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/job/getJobsForSpCompany?companyName=amazon",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"job",
+								"getJobsForSpCompany"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "amazon"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
